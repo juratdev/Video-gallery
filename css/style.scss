@@ -56,9 +56,14 @@ body {
 .link-boxes {
   margin-top: 50px;
 
-  iframe {
-    margin-right: 20px;
-    margin-top: 20px;
+  .linkBox {
+    position: relative;
+
+    iframe {
+      margin-top: 20px;
+    }
+
   }
+
 
 }

@@ -52,7 +52,9 @@ body {
 .link-boxes {
   margin-top: 50px;
 }
-.link-boxes iframe {
-  margin-right: 20px;
+.link-boxes .linkBox {
+  position: relative;
+}
+.link-boxes .linkBox iframe {
   margin-top: 20px;
 }/*# sourceMappingURL=style.css.map */

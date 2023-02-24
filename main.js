@@ -1,9 +1,9 @@
-const linkBox = document.getElementById("linkBox");
+const linkBox = document.querySelector(".linkBox");
 const inputText = document.getElementById("inputText");
 
 linkBox.innerHTML = "";
 
-
+// Create Video
 const addVideo = () => {
 
   let url = inputText.value;
@@ -37,4 +37,15 @@ const addVideo = () => {
   iframe.allowFullscreen = true;
 
   linkBox.appendChild(iframe);
+
+  // Create button delete
+  const btn = document.createElement("button");
+  btn.innerHTML = "<i class='fas fa-trash'></i>";
+
+  linkBox.appendChild(btn);
+
+  btn.onclick = () => {
+    linkBox.removeChild(iframe);
+    linkBox.removeChild(btn);
+  }
 }
