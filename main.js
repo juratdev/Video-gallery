@@ -3,13 +3,29 @@ const inputText = document.getElementById("inputText");
 
 linkBox.innerHTML = "";
 
+// Check Video
+const checkVideo = (video) => {
+  const videos = document.getElementsByTagName("iframe")
+
+  for (const element of videos) {
+    if (video === element.src) {
+      alert("Bu video oldin qo'shilgan!")
+      return false;
+    }
+  }
+  return true;
+}
+const removeAllVideos = () => {
+  linkBox.innerHTML = "";
+}
+
 // Create Video
 const addVideo = () => {
 
   let url = inputText.value;
   let video = '';
 
-  if (url == '' || !url.startsWith("https")) {
+  if (url == '' || !url.startsWith("https") || !checkVideo(video)) {
     return;
   }
 
@@ -25,6 +41,9 @@ const addVideo = () => {
     video = url
   }
 
+  if (!checkVideo(video)) {
+    return
+  }
 
   const iframe = document.createElement('iframe');
 
