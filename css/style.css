@@ -52,14 +52,12 @@ body {
 .link-boxes {
   margin-top: 50px;
 }
-.link-boxes .linkBox {
-  position: relative;
-}
-.link-boxes .linkBox iframe {
-  margin-top: 20px;
-}
 .link-boxes .linkBox button {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
+  background-color: red;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+.link-boxes .linkBox button i {
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
